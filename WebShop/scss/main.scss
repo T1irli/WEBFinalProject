@@ -1,0 +1,67 @@
+$main-color: #107C10;
+$back-color: #23272F;
+$active-main: #9BF00B;
+$border-color: #7F8899;
+$nav-height: 80px;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    background-color: #E8E8E8;
+}
+
+//navigation
+
+.nav-container{
+    width: 100%;
+    height: $nav-height;
+    padding: 15px;
+    background-color: $back-color;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;
+    top: 0;
+}
+
+.nav-container-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item{
+    margin: 0 20px;
+}
+
+.search-bar{
+    display: flex;
+}
+
+.nav-container .cart-icon:hover{
+    transform: rotate(-20deg);
+}
+
+.content{
+    margin-top: $nav-height;
+    display: flex;
+}
+
+.sidebar{
+    align-self: flex-start;
+    width: 300px;
+    background-color: $border-color;
+    position: fixed;
+    top: $nav-height;
+    height: 100%;
+}
+
+main.container-fluid{
+    margin-top: 20px;
+    margin-left: 300px;
+}
