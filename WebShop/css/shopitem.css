@@ -10,7 +10,6 @@
   height: 380px;
   padding: 10px;
   background-color: #fff;
-  margin: 20px;
   border-radius: 10px;
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -76,4 +75,59 @@
 }
 .shop-footer > .cart-btn:hover {
   color: #107C10;
+}
+
+.new-item {
+  height: 380px;
+  background-color: rgba(180, 178, 178, 0.5);
+  border-radius: 10px;
+  border: 1px dashed #23272F;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.new-item .plus-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.new-item .arrow {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #7F8899;
+  display: block;
+}
+
+.new-item .arrow:first-child {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.new-item p {
+  margin-top: 10px;
+  color: #7F8899;
 }
