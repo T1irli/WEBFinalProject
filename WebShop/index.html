@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/shopitem.css">
+    <link rel="stylesheet" href="css/burgermenu.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Coolers</title>
 </head>
@@ -15,13 +16,26 @@
     <nav>
        <div class="nav-container">
         <div class="icon">
-            icon
+            <img src="img/logo.png" alt="icon">
+        </div>
+        <div class="navbar navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <div class="nav-container-info">
             <div class="search-bar nav-item">
                 <input type="search" placeholder="Я шукаю..." id="search">
-                <div class="button green-btn">Знайти</div>
+                <div class="button green-btn">Знайти
+                    <svg class="search-icon-inner" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="16px" height="16px"><path stroke="white" fill="white" d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"/></svg>
+                </div>
             </div>
+            <div class="search-icon nav-item search-icon-outer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon"  viewBox="0 0 50 50" width="32px" height="32px"><path stroke="white" fill="white" d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"/></svg>
+            </div>
+            
             <div class="account-icon nav-item">
                 
                 <svg class="svg-icon" viewBox="0 0 20 20" width="32">
@@ -49,7 +63,7 @@
         <main class="container-fluid">
             <div class="row">
 
-                <div class="p-2 col-md-6 col-lg-4 col-xl-3">
+                <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="new-item">
                         <div class="plus-icon">
                             <span class="arrow"></span>
@@ -59,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="p-2 col-md-6 col-lg-4 col-xl-3">
+                <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="shop-item">
                         <img src="img/pic1.jpg" alt="cooler">
                         <div class="shop-item-info">
@@ -76,7 +90,7 @@
                     </div>
                 </div>
 
-                <div class="p-2 col-md-6 col-lg-4 col-xl-3">
+                <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="shop-item">
                         <img src="img/pic1.jpg" alt="cooler">
                         <div class="shop-item-info">
@@ -93,7 +107,7 @@
                     </div>
                 </div>
 
-                <div class="p-2 col-md-6 col-lg-4 col-xl-3">
+                <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="shop-item">
                         <img src="img/pic1.jpg" alt="cooler">
                         <div class="shop-item-info">
@@ -110,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="p-2 col-md-6 col-lg-4 col-xl-3">
+                <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="shop-item">
                         <img src="img/pic1.jpg" alt="cooler">
                         <div class="shop-item-info">
@@ -130,6 +144,6 @@
             </div>
         </main>
     </div>
-    
+    <script src="js/toggle.js"></script>
 </body>
 </html>

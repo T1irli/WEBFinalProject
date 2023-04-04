@@ -26,6 +26,7 @@ body{
     justify-content: space-between;
     color: #fff;
     position: fixed;
+    z-index: 100;
     top: 0;
 }
 
@@ -64,4 +65,119 @@ body{
 main.container-fluid, main.container{
     margin-top: 20px;
     margin-left: 300px;
+}
+
+.search-icon-outer{
+    display: none;
+}
+
+.icon img{
+    align-self: center;
+    height: 32px;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .sidebar{
+        display: none;
+        width: 0;
+    }
+
+    main.container-fluid, main.container{
+        margin: 20px 50px;
+    }
+
+    .search-icon-outer{
+        display: block;
+        transition: all .3s linear;
+    }
+
+    .search-icon-outer:hover svg path{
+        stroke: $main-color;
+        fill: $main-color;
+    }
+
+    .search-bar{
+        display: none;
+    }
+
+    .icon{
+        display: none;
+    }
+
+    //Toggle
+
+    .navbar-toggler{
+        display: block;
+    }
+     
+    .navbar-dark .navbar-toggler span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        margin: 6px auto;
+        background: #fff;
+        transition: all .6s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    }
+     
+    .navbar-dark .navbar-toggler:hover span {
+        background: #ccc;
+    }
+     
+    /* rotate first span */
+    .navbar-dark .navbar-toggler[aria-expanded="true"] span:first-of-type {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+     
+    /* hide second span */
+    .navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-of-type(2) {
+        opacity: 0;
+    }
+     
+    /* rotate third span */
+    .navbar-dark .navbar-toggler[aria-expanded="true"] span:last-of-type {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+     
+    .navbar-dark .navbar-toggler[aria-expanded="false"] span {
+        transform: none;
+        opacity: 1;
+    }
+
+    .navbar-dark .navbar-toggler {
+        border-color: #444;
+    }
+
+    
+.navbar-dark .navbar-toggler span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 6px auto;
+    background: #fff;
+    transition: all .6s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+
+/* rotate first span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:first-of-type {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+ 
+/* hide second span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-of-type(2) {
+    opacity: 0;
+}
+ 
+/* rotate third span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:last-of-type {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar-dark .navbar-toggler[aria-expanded="false"] span {
+    transform: none;
+    opacity: 1;
+}
 }
