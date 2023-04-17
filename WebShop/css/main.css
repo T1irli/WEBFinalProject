@@ -130,20 +130,20 @@ main.container-fluid, main.container {
     background: #ccc;
   }
   /* rotate first span */
-  .navbar-dark .navbar-toggler[aria-expanded=true] span:first-of-type {
+  .navbar-dark .open span:first-of-type {
     -webkit-transform: rotate(45deg) translate(6px, 6px);
             transform: rotate(45deg) translate(6px, 6px);
   }
   /* hide second span */
-  .navbar-dark .navbar-toggler[aria-expanded=true] span:nth-of-type(2) {
+  .navbar-dark .open span:nth-of-type(2) {
     opacity: 0;
   }
   /* rotate third span */
-  .navbar-dark .navbar-toggler[aria-expanded=true] span:last-of-type {
+  .navbar-dark .open span:last-of-type {
     -webkit-transform: rotate(-45deg) translate(5px, -5px);
             transform: rotate(-45deg) translate(5px, -5px);
   }
-  .navbar-dark .navbar-toggler[aria-expanded=false] span {
+  .navbar-dark .close span {
     -webkit-transform: none;
             transform: none;
     opacity: 1;
@@ -161,20 +161,20 @@ main.container-fluid, main.container {
     transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   /* rotate first span */
-  .navbar-dark .navbar-toggler[aria-expanded=true] span:first-of-type {
+  .navbar-dark .open span:first-of-type {
     -webkit-transform: rotate(45deg) translate(6px, 6px);
             transform: rotate(45deg) translate(6px, 6px);
   }
   /* hide second span */
-  .navbar-dark .navbar-toggler[aria-expanded=true] span:nth-of-type(2) {
+  .navbar-dark .open span:nth-of-type(2) {
     opacity: 0;
   }
   /* rotate third span */
-  .navbar-dark .navbar-toggler[aria-expanded=true] span:last-of-type {
+  .navbar-dark .open span:last-of-type {
     -webkit-transform: rotate(-45deg) translate(5px, -5px);
             transform: rotate(-45deg) translate(5px, -5px);
   }
-  .navbar-dark .navbar-toggler[aria-expanded=false] span {
+  .navbar-dark .close span {
     -webkit-transform: none;
             transform: none;
     opacity: 1;
