@@ -2,17 +2,30 @@ $main-color: #107C10;
 $back-color: #23272F;
 $active-main: #19B516;
 $border-color: #7F8899;
+$red-color: red;
 
 .button{
     padding: 10px 20px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     transition: all ease .3s;
-
 }
 
 .green-btn{
     background-color: $main-color;
+    min-width: 112px;
+}
+
+.red-btn{
+    border-radius: 20px;
+    padding: 3px;
+    margin-left: 5px;
+    align-self: center;
+    text-align: center;
+    height: 30px;
+    min-width: 30px;
+    transition: all ease .3s;
+    background-color: $red-color;
 }
 
 .green-btn:hover{

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/shopitem.css">
     <link rel="stylesheet" href="css/burgermenu.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Coolers</title>
 </head>
@@ -31,8 +32,11 @@
                 <div class="button green-btn">Знайти
                     <svg class="search-icon-inner" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="16px" height="16px"><path stroke="white" fill="white" d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"/></svg>
                 </div>
+                <div class="red-btn" onclick="hideSearchBar()">
+                    X
+                </div>
             </div>
-            <div class="search-icon nav-item search-icon-outer">
+            <div class="search-icon nav-item search-icon-outer" onclick="showSearchBar()">
                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon"  viewBox="0 0 50 50" width="32px" height="32px"><path stroke="white" fill="white" d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"/></svg>
             </div>
             
@@ -50,18 +54,69 @@
         </div>
        </div>
     </nav>
+
+    <div id="modal-panel-back" onclick="closeModalPanel()">
+    </div>
+    <div id="modal-panel">
+        <div class="mheader">
+            <p>Cooling system options</p>
+            <div class="mclose" onclick="closeModalPanel()">
+                <span class="mline mline-1"></span>
+                <span class="mline mline-2"></span>
+            </div>
+        </div>
+        <hr>
+        <div class="mcontent">
+            <form action="">
+                <label for="creator">Виробник</label>
+                <input type="text" id="creator">
+                <label for="cooling_type">Тип</label>
+                <select id="cooling_type">
+                    <option value="air">Повітряна</option>
+                    <option value="water">Водяна</option>
+                </select>
+                <label for="power">Розсіювальна потужність (Вт)</label>
+                <input type="number" id="power">
+                <label for="loud">Рівень шуму (Дб)</label>
+                <input type="number" id="loud">
+                <label for="material">Матеріал</label>
+                <select id="material">
+                    <option value="aluminium">Алюміній</option>
+                    <option value="cuprum">Мідь</option>
+                    <option value="iron">Залізо</option>
+                </select>
+                <img src="" alt="photo">
+                <label class="smaller" for="photo_pick">Виберіть файл нижче</label>
+                <input id="photo_pick" type="file">
+            </form>
+        </div>
+        <div class="mfooter">
+            <button class="component_button edit_btn">Edit</button>
+        </div>
+    </div>
+
     <div class="content">
         <aside class="sidebar">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li id="f_creator">
+                    <p>Виробник</p>
+                </li>
+                <li id="f_type">
+                    <p>Тип</p>
+                </li>
+                <li id="f_powers">
+                    <p>Розсіювальна потужність</p>
+                </li>
+                <li id="f_noise">
+                    <p>Рівень шуму</p>
+                </li>
+                <li id="f_material">
+                    <p>Матеріал радіатора</p>
+                </li>
             </ul>
         </aside>
         <main class="container-fluid">
-            <div class="row">
+            <div class="row content-row">
 
                 <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="new-item">
@@ -124,26 +179,11 @@
                     </div>
                 </div>
 
-                <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="shop-item">
-                        <img src="img/pic1.jpg" alt="cooler">
-                        <div class="shop-item-info">
-                            <h3>Кулер Zezzio ZH-C300</h3>
-                            <p class="discount">1200$</p>
-                        </div>
-                        <div class="shop-footer">
-                            <p class="price">999$</p>
-                            <div class="cart-btn">
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16"> <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/> </svg>   -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1"><path d="M834.3 705.7c0 82.2-66.8 149-149 149H325.9c-82.2 0-149-66.8-149-149V346.4c0-82.2 66.8-149 149-149h129.8v-42.7H325.9c-105.7 0-191.7 86-191.7 191.7v359.3c0 105.7 86 191.7 191.7 191.7h359.3c105.7 0 191.7-86 191.7-191.7V575.9h-42.7v129.8z"/><path d="M889.7 163.4c-22.9-22.9-53-34.4-83.1-34.4s-60.1 11.5-83.1 34.4L312 574.9c-16.9 16.9-27.9 38.8-31.2 62.5l-19 132.8c-1.6 11.4 7.3 21.3 18.4 21.3 0.9 0 1.8-0.1 2.7-0.2l132.8-19c23.7-3.4 45.6-14.3 62.5-31.2l411.5-411.5c45.9-45.9 45.9-120.3 0-166.2zM362 585.3L710.3 237 816 342.8 467.8 691.1 362 585.3zM409.7 730l-101.1 14.4L323 643.3c1.4-9.5 4.8-18.7 9.9-26.7L436.3 720c-8 5.2-17.1 8.7-26.6 10z m449.8-430.7l-13.3 13.3-105.7-105.8 13.3-13.3c14.1-14.1 32.9-21.9 52.9-21.9s38.8 7.8 52.9 21.9c29.1 29.2 29.1 76.7-0.1 105.8z"/></svg>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </main>
     </div>
     <script src="js/toggle.js"></script>
+    <script src="js/coller.js"></script>
+    <script src="js/buttons.js"></script>
 </body>
 </html>
