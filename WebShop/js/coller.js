@@ -1,5 +1,5 @@
 class Coller{
-    constructor(name, price, img){
+    constructor(name, price, owner, type, img){
         this.name = name
         this.price = price
         this.img = img

@@ -103,7 +103,7 @@ main.container-fluid, main.container {
 #modal-panel {
   visibility: hidden;
   width: min(80%, 500px);
-  height: 700px;
+  height: 780px;
   background-color: white;
   position: fixed;
   z-index: 300;
@@ -124,6 +124,12 @@ main.container-fluid, main.container {
 }
 
 @media screen and (max-width: 768px) {
+  #modal-panel {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
   .sidebar {
     display: none;
     width: 0;

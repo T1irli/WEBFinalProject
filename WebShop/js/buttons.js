@@ -1,7 +1,7 @@
 let modalPanel = document.getElementById('modal-panel')
 let modalPanelBack = document.getElementById('modal-panel-back')
 
-function openModalPanel(){
+function openModalPanel(update = true){
     modalPanel.style.visibility = 'visible'
     modalPanelBack.style.visibility = 'visible'
 }

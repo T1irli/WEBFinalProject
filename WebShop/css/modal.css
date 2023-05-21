@@ -49,17 +49,21 @@
     width: 60%;
 }
 
+#modal-panel hr{
+    margin: 0 2px;
+}
+
 .mcontent input, .mcontent select{
     width: 100%;
-    margin-top: 5px;
-    margin-bottom: 8px;
+    margin-top: 6px;
+    margin-bottom: 4px;
     height: 30px;
     font-size: 16px;
 }
 
 .mcontent label{
     font-size: 16px;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 .mcontent img{
@@ -79,6 +83,6 @@ label.smaller{
     height: 67px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }

@@ -16,6 +16,30 @@ $red-color: red;
     min-width: 112px;
 }
 
+@mixin formbutton($color){
+    border: 0px solid black;
+    border-radius: 5px;
+    background-color: $color;
+    color: white;
+    font-size: 20px;
+}
+
+.confirm-button{
+    @include formbutton($main-color);
+}
+
+.confirm-button:hover{
+    background-color: $active-main;
+}
+
+.cancel-button{
+    @include formbutton(crimson);
+}
+
+.cancel-button:hover{
+    background-color: red;
+}
+
 .red-btn{
     border-radius: 20px;
     padding: 3px;
